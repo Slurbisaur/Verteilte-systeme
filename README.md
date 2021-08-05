@@ -108,6 +108,7 @@ CREATE OR REPLACE VIEW playtime_total AS
 Since it is a view, it can be accessed like a table and complex operations can easily be implemented without resorting to subqueries, which makes it easier to develop and read.
 
 # Bonus
+I learned this in the Databases course so i figured why not use my knowledge
 ## Database Schema
 ### First Normal Form
 
