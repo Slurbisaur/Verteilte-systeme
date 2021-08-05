@@ -43,7 +43,7 @@ statistics, budget, investments and organization of the users games.
 
 
 ## Queries
-*In this part the integration of functions for the connected system inform of a web app is explained and developed.*
+*In this part the integration of functions for the connected system inform of a web app are explained and developed.*
 
 1. The following query is used in the web application to display a list of users:
 ``` pgsql
