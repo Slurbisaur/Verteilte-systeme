@@ -17,17 +17,17 @@ statistics, budget, investments and organization of the users games.
 
 4. Stored inside of the StonksDB are a variety of Tables:
   &nbsp;&nbsp;&nbsp;- A table for users with the primary key stonksID (User ID) and the attributes uname (the name of the user) as well
-    &nbsp;&nbsp;&nbsp;as the user's favourite game as fav_gameID. 
+    as the user's favourite game as fav_gameID. 
   
   &nbsp;&nbsp;&nbsp;- A table for the games available on the platform with primary gameID
   
   &nbsp;&nbsp;&nbsp;- A table for genres which is directly coupled the games table to classify the genre of the game available.
   
   &nbsp;&nbsp;&nbsp;- Some games offer downloadable content, also called DLC.
-    &nbsp;&nbsp;&nbsp;these are maintained in a separate table called dlc which keeps track of the gameID and the name of the dlc.
+    these are maintained in a separate table called dlc which keeps track of the gameID and the name of the dlc.
     
   &nbsp;&nbsp;&nbsp;- Also included are the Tables developers and publishers. The developer table is dependant on the publisher table since
-    &nbsp;&nbsp;&nbsp;developers need a publisher to promote and make their games available for the public. 
+    developers need a publisher to promote and make their games available for the public. 
 
 9. Next we have a table for games_owned, which maps the games available on our platform to the users that already own 
 them. It includes the primary keys of the tables users and games (stonksid, gameid) to create an n-m link.
