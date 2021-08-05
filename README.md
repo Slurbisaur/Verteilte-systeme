@@ -158,9 +158,9 @@ the third normal form will not be violated.
 
 The weak entity dlc (the primary key for the dlc table consists of foreign key gameID and dlc_name)
 
-Table dlc
-| gameID |    dlc_name    | price | currency |
-|--------|----------------|-------|----------|
-|   2    | 'Blood & Wine' | 19.99 |   'EUR'  |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Table dlc
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| gameID |    dlc_name    | price | currency |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--------|----------------|-------|----------|
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|   2    | 'Blood & Wine' | 19.99 |   'EUR'  |
 
 This table is completely dependent on the existence of the games the downloadable content is created for. 
