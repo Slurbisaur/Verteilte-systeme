@@ -35,9 +35,9 @@ statistics, budget, investments and organization of the users games.
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The total play-time of each user, spent in-game is saved in the table playtime.
 
-12. Transactions are implemented by psycopg2, which was used for the web app. Any time a database connection is established or a commit is placed, it automatically starts a new transaction. A manual implementation of transactions is therefore omitted.
+5. Transactions are implemented via psycopg2, which was used for the web app. Any time a database connection is established or a commit is placed, it automatically starts a new transaction. A manual implementation of transactions is therefore omitted.
 
-13. Views are explained in the section on queries as they are simply wrappers for predefined queries.
+6. Views are explained in the section on queries as they are simply wrappers for predefined queries.
   
 
 
@@ -77,8 +77,8 @@ table we would violate the second normal form, therefore the two dependant table
 ### Third Normal Form
 
 all rules of the second normal form apply inclusive the absence of transitive dependencies.
-We intentionally designed the database in a way that no transitive dependencies could happen therefore
-we can/did not violate the third normal form. 
+The database is intentionally created so that no transitive dependencies could happen therefore
+the third normal form will not be violated. 
 
 
 
