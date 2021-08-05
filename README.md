@@ -28,14 +28,12 @@ statistics, budget, investments and organization of the users games.
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;these are maintained in a separate table called dlc which keeps track of the gameID and the name of the dlc.
     
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Also included are the Tables developers and publishers. The developer table is dependant on the publisher table since\
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;developers need a publisher to promote and make their games available for the public. 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;developers need a publisher to promote and make their games available for the public. 
     
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Also included are tables for owned products games_owned, dlc_owned which map the games/dlc available on the platform to the users\ 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that already own them.
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Also included are tables for owned products games_owned, dlc_owned which map the games/dlc available on the platform to the users\ 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that already own them.
 
-11. The total play time users spent in certain games is saved in the table playtime.
-This table includes stonksid and gameid as its primary key to links to the users and games tables as well as playtime_hours as its only attribute.
-The reason why playtime and games_owned are separate tables is because a player can have time in a game without owning it from free demos.
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The total play time users spent in certain games is saved in the table playtime.
 
 12. Transactions are implemented by psycopg2, which was used for the web app. Any time a database connection is established or a commit is placed, it automatically starts a new transaction. A manual implementation of transactions is therefore omitted.
 
