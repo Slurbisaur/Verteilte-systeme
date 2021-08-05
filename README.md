@@ -43,6 +43,7 @@ statistics, budget, investments and organization of the users games.
 
 
 ## Queries
+In this part the integration of the acutal other connected system is explained and developed.
 
 1. The following query is used in the web application to display a list of users:
 ``` pgsql
