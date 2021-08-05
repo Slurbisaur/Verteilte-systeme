@@ -3,42 +3,31 @@
 
 ## Tables
 
-1. For this project our main goal is to give the users of a fictive marketplace
-a web interface to check their owned games, which developers they were made by and what publisher published
+1. For this project the main goal is to give the users a web-interface inform of a fictive statistical
+Database to check their owned games, which developers they were made by and what publisher published
 the game in question. 
 
 2. The users are able to see things like the total amount of money spent on games and their respective dlc and 
 playtime in their favourite games (and non favourite games).
 This information is accessible to everyone.
 
-3. To give the users of the StonksDB the best experience background queries for a variety of data outputs are
+3. To give the users of the StonksDB the best experience background queries, a variety of data outputs are
 handled unseen by the user to give him/her a fast and responsive interface for tracking 
 statistics, budget, investments and organization of the users games. 
 
 4. Stored inside of the StonksDB are a variety of Tables:
-A table for users with the primary key stonksID (User ID) and the attributes uname (the name of the user) as well
-as the user's favourite game as fav_gameID. 
-
-5. A table for the games available on the platform with primary gameID, two foreign keys devID 
-(for the developer connection) and genreID (for the genre the game is in) and the standard attributes
-game_name, price (as an integer) and the Currency.
-
-6. A table for genres which is directly coupled the games table to classify the genre of the game available, 
-the link between these two tables is established via the genreID which is a foreign key to the games table and
-primary key in regards of the genres table. This table also maintains the name of the genre as a string under 
-genre_name.
-
-7. Some games offer downloadable content, or DLC.
-these are maintained in a separate table called dlc which keeps track of the gameID and the name of the dlc (dlc_name)
-which form the primary key together. Also the table dlc is dependant on the existence of the games, if there were no games 
-there would be no reason for dlc to exist for any game, this also renders dlc to be a weak entity. Price and currency are
-further attributes of dlc and keeping them separate makes sure to stay in line with the second normal form.
-
-8. We also included the Tables developers and publishers. The developer table is dependant on the publisher table since
-developers need a publisher to promote and make their games available for the public. The attributes of the developers table 
-consist of a primary key devID, the name of the developer studio (dev_name) and the respective publisher_id, which refers 
-to the publisher under which they sell their game. The publishers table on the other hand is not dependant on one
-specific developer studio and one publisher can have many dev studios producing games for them. Therefore they only have a primary key publisher_id and their name (pub_name) as an attribute.
+  - A table for users with the primary key stonksID (User ID) and the attributes uname (the name of the user) as well
+    as the user's favourite game as fav_gameID. 
+  
+  - A table for the games available on the platform with primary gameID
+  
+  - A table for genres which is directly coupled the games table to classify the genre of the game available.
+  
+  - Some games offer downloadable content, also called DLC.
+    these are maintained in a separate table called dlc which keeps track of the gameID and the name of the dlc.
+    
+  - Also included are the Tables developers and publishers. The developer table is dependant on the publisher table since
+    developers need a publisher to promote and make their games available for the public. 
 
 9. Next we have a table for games_owned, which maps the games available on our platform to the users that already own 
 them. It includes the primary keys of the tables users and games (stonksid, gameid) to create an n-m link.
