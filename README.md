@@ -33,7 +33,7 @@ statistics, budget, investments and organization of the users games.
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Also included are tables for owned products games_owned, dlc_owned which map the games/dlc available on the platform to the users\ 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;that already own them.
 
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The total play time users spent in certain games is saved in the table playtime.
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The total play-time of each user, spent in-game is saved in the table playtime.
 
 12. Transactions are implemented by psycopg2, which was used for the web app. Any time a database connection is established or a commit is placed, it automatically starts a new transaction. A manual implementation of transactions is therefore omitted.
 
