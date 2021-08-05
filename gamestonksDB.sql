@@ -72,7 +72,7 @@ CREATE TABLE users
  PRIMARY KEY   (stonksid));
 
 INSERT INTO users(uname, stonksid, fav_gameid)
- VALUES ('miguel7501',56423, 9),('sxd',784521,3),('slurbisaur',221016, 10),('Kilian',23164, 11),('sauce',2315, 11),
+ VALUES ('max-musterfrau',56423, 9),('Knodel',784521,3),('slurbisaur',221016, 10),('Mukagen',23164, 11),('Vinesauce',2315, 11),
  ('shroud',51337, 4),('Petko',14208, 2),('Ninja',1885, 1),('dosia_Xgod',1, 4),('Pokimane',1695, 3);
 
 
