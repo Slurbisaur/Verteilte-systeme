@@ -132,8 +132,8 @@ If price would be in one column with the currency symbol the first norm form wou
 Table users
 |    uname     | stonksid | fav_gameid |
 |--------------|----------|------------|
-| 'miguel7501' |  56423   |     9      |
-|     'sxd'    |  784521  |     3      |
+| 'max-musterfrau' |  56423   |     9      |
+|     'Knodel'    |  784521  |     3      |
 
 Table games_owned
 | stonksid | gameid |
