@@ -41,58 +41,6 @@ statistics, budget, investments and organization of the users games.
   
 
 
-### First Normal Form
-
-Table games
-| gameid |    game_name     | genreid | devid | price | currency |
-|--------|------------------|---------|-------|-------|----------|	 
-|   1    | 'Cyberpunk 2077' |    2    |   2   | 59.99 |  'EUR'   |	 
-|   2    |  'The Witcher 3' |    2    |   2   | 29.99 |  'EUR'   |	
-
-Relations that have a composition of multi-valued attributes violate the first normal form
-therefore all attributes are written atomically into their own columns.
-If price would be in one column with the currency symbol the first norm form would be violated.
-
-
-
-### Second Normal Form
-
-Table users
-|    uname     | stonksid | fav_gameid |
-|--------------|----------|------------|
-| 'miguel7501' |  56423   |     9      |
-|     'sxd'    |  784521  |     3      |
-
-Table games_owned
-| stonksid | gameid |
-|----------|--------|
-|  221016  |   1    |
-|  221016  |   2    |
-
-all rules of the first normal form apply inclusive the absence of partial dependencies.
-One user can own multiple games if we would store all games a user owns inside of one column inside of the users 
-table we would violate the second normal form, therefore the two dependant tables are split.
-
-
-### Third Normal Form
-
-all rules of the second normal form apply inclusive the absence of transitive dependencies.
-The database is intentionally created so that no transitive dependencies could happen therefore
-the third normal form will not be violated. 
-
-
-
-### Weak entity 
-
-The weak entity dlc (the primary key for the dlc table consists of foreign key gameID and dlc_name)
-
-Table dlc
-| gameID |    dlc_name    | price | currency |
-|--------|----------------|-------|----------|
-|   2    | 'Blood & Wine' | 19.99 |   'EUR'  |
-
-This table is completely dependent on the existence of the games the downloadable content is created for. 
-
 
 ## Queries
 
@@ -159,3 +107,56 @@ CREATE OR REPLACE VIEW playtime_total AS
 ```
 Since it is a view, it can be accessed like a table and complex operations can easily be implemented without resorting to subqueries, which makes it easier to develop and read.
 
+# Bonus
+## Database Schema
+### First Normal Form
+
+Table games
+| gameid |    game_name     | genreid | devid | price | currency |
+|--------|------------------|---------|-------|-------|----------|	 
+|   1    | 'Cyberpunk 2077' |    2    |   2   | 59.99 |  'EUR'   |	 
+|   2    |  'The Witcher 3' |    2    |   2   | 29.99 |  'EUR'   |	
+
+Relations that have a composition of multi-valued attributes violate the first normal form
+therefore all attributes are written atomically into their own columns.
+If price would be in one column with the currency symbol the first norm form would be violated.
+
+
+
+### Second Normal Form
+
+Table users
+|    uname     | stonksid | fav_gameid |
+|--------------|----------|------------|
+| 'miguel7501' |  56423   |     9      |
+|     'sxd'    |  784521  |     3      |
+
+Table games_owned
+| stonksid | gameid |
+|----------|--------|
+|  221016  |   1    |
+|  221016  |   2    |
+
+all rules of the first normal form apply inclusive the absence of partial dependencies.
+One user can own multiple games if we would store all games a user owns inside of one column inside of the users 
+table we would violate the second normal form, therefore the two dependant tables are split.
+
+
+### Third Normal Form
+
+all rules of the second normal form apply inclusive the absence of transitive dependencies.
+The database is intentionally created so that no transitive dependencies could happen therefore
+the third normal form will not be violated. 
+
+
+
+### Weak entity 
+
+The weak entity dlc (the primary key for the dlc table consists of foreign key gameID and dlc_name)
+
+Table dlc
+| gameID |    dlc_name    | price | currency |
+|--------|----------------|-------|----------|
+|   2    | 'Blood & Wine' | 19.99 |   'EUR'  |
+
+This table is completely dependent on the existence of the games the downloadable content is created for. 
