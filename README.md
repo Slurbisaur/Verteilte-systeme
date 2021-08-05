@@ -37,13 +37,13 @@ statistics, budget, investments and organization of the users games.
 
 5. Transactions are implemented via psycopg2, which was used for the web app. Any time a database connection is established or a commit is placed, it automatically starts a new transaction. A manual implementation of transactions is therefore omitted.
 
-6. Views are explained in the section on queries as they are simply wrappers for predefined queries.
+6. Views are explained in the section on queries as they are normally just wrappers for predefined queries.
   
 
 
 
 ## Queries
-In this part the integration of the acutal other connected system is explained and developed.
+*In this part the integration of the acutal other connected system is explained and developed.*
 
 1. The following query is used in the web application to display a list of users:
 ``` pgsql
@@ -109,8 +109,10 @@ CREATE OR REPLACE VIEW playtime_total AS
 Since it is a view, it can be accessed like a table and complex operations can easily be implemented without resorting to subqueries, which makes it easier to develop and read.
 
 # Bonus
-I learned this in the Databases course so I figured why not use my knowledge
+*I learned this in the Databases course so I figured why not use my knowledge*
+
 ## Database Schema
+
 ### First Normal Form
 
 Table games
