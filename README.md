@@ -16,6 +16,7 @@ handled unseen by the user to give him/her a fast and responsive interface for t
 statistics, budget, investments and organization of the users games. 
 
 4. Stored inside of the StonksDB are a variety of Tables:
+
   &nbsp;&nbsp;&nbsp;&nbsp;- A table for users with the primary key stonksID (User ID) and the attributes uname (the name of the user) as well
     as the user's favourite game as fav_gameID. 
   
