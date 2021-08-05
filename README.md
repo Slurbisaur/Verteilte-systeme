@@ -108,7 +108,7 @@ CREATE OR REPLACE VIEW playtime_total AS
 Since it is a view, it can be accessed like a table and complex operations can easily be implemented without resorting to subqueries, which makes it easier to develop and read.
 
 # Bonus
-I learned this in the Databases course so i figured why not use my knowledge
+I learned this in the Databases course so I figured why not use my knowledge
 ## Database Schema
 ### First Normal Form
 
@@ -139,8 +139,8 @@ Table games_owned
 |  221016  |   2    |
 
 all rules of the first normal form apply inclusive the absence of partial dependencies.
-One user can own multiple games if we would store all games a user owns inside of one column inside of the users 
-table we would violate the second normal form, therefore the two dependant tables are split.
+One user can own multiple games, if all games a user owns, would be stored inside of one column of the users 
+table the second normal form would violated, therefore the two dependant tables are split.
 
 
 ### Third Normal Form
