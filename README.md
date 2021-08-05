@@ -24,10 +24,10 @@ statistics, budget, investments and organization of the users games.
   
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- A table for genres which is directly coupled the games table to classify the genre of the game available.
   
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Some games offer downloadable content, also called DLC.
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Some games offer downloadable content, also called DLC.\
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;these are maintained in a separate table called dlc which keeps track of the gameID and the name of the dlc.
     
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Also included are the Tables developers and publishers. The developer table is dependant on the publisher table since
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Also included are the Tables developers and publishers. The developer table is dependant on the publisher table since\
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;developers need a publisher to promote and make their games available for the public. 
 
 9. Next we have a table for games_owned, which maps the games available on our platform to the users that already own 
