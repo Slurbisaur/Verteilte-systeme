@@ -1,0 +1,33 @@
+{% extends "base.html" %} 
+
+{% block title %}
+Change User
+{% endblock %}
+{% block header %} 
+
+{% endblock %}
+{% block body %} 
+<h1>Update User</h1>
+
+
+<form method="POST" action="/changeusers">
+    <div class="form-group">
+      <label for="stonksid">Enter Stonks ID</label>
+      <input type="text" id="stonksid" name="stonksid" class="form-control" placeholder="Please enter stonks id" style="width:30%;margin-left:auto;margin-right:auto;">
+    </div>
+    <div class="form-group">
+      <label for="newuname">New Username</label>
+      <input type="text" id="newuname" name="newuname" class="form-control" placeholder="Please enter the new username" style="width:30%;margin-left:auto;margin-right:auto;">
+    </div>
+    <div class="form-group">
+      <label for="favgameselect">Select favorite game</label>
+      <select class="form-control" id="favgameselect" name="favgameselect" style="width:30%;margin-left:auto;margin-right:auto;">
+            <option value=0>Please select a game</option>
+        {% for game in games %} 
+            <option value={{game[0]}}>{{game[1]}}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <input type="submit" value="Update User" class="btn btn-dark"\>
+  </form>
+{% endblock %}

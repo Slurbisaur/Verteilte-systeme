@@ -1,0 +1,41 @@
+{% extends "base.html" %} 
+
+{% block title %}
+GamestonksDB Users
+{% endblock %}
+{% block header %} 
+
+{% endblock %}
+{% block body %} 
+<h1>Games List</h1>
+<form method="POST" action="/gamesbypub">
+  <h3>Select publisher to view games</h3>
+  <div class="form-group">
+  <select id="viewgamesbypub" name="viewgamesbypub" class="form-control" style="width:30%;margin-left:auto;margin-right:auto;">
+    {% for pub in pubs %}
+      <option value={{pub[0]}}>{{pub[1]}}</option>
+    {% endfor %}
+  </select>
+  </div>
+  <input type="submit" value="View Games" class="btn btn-dark"\>
+</form>
+{% if gamesbypub != 0 %}
+<h1>Games for {{gamesbypub[0][6]}}</h1>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Game ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Developer</th>
+        <th scope="col">Genre</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for game in gamesbypub %}
+        <tr><td>{{game[0]}}</td><td>{{game[1]}}</td><td>{{game[2]}}</td><td>{{game[3]}}</td><td>{{game[4]}} {{game[5]}}</td></tr>
+        {% endfor %}
+    </tbody>
+  </table>
+{% endif %}
+{% endblock %}

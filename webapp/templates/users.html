@@ -1,0 +1,27 @@
+{% extends "base.html" %} 
+
+{% block title %}
+GamestonksDB Users
+{% endblock %}
+{% block header %} 
+
+{% endblock %}
+{% block body %} 
+<h1>User List</h1>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Gamestonks ID</th>
+        <th scope="col">Username</th>
+        <th scope="col">Fav Game</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for user in userList %}
+        <tr><td>{{user[0]}}</td><td>{{user[1]}}</td><td>{{user[2]}}</td></tr>
+        {% endfor %}
+    </tbody>
+  </table>
+
+
+{% endblock %}

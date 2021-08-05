@@ -1,0 +1,32 @@
+{% extends "base.html" %} 
+
+{% block title %}
+Add User
+{% endblock %}
+{% block header %} 
+
+{% endblock %}
+{% block body %} 
+<h1>Add User</h1>
+
+
+<form method="POST" action="/addusers">
+    <div class="form-group">
+      <label for="uname">Username</label>
+      <input type="text" id="uname" name="uname" class="form-control" placeholder="Please enter a username" style="width:30%;margin-left:auto;margin-right:auto;">
+    </div>
+    <div class="form-group">
+      <label for="favgameselect">Select favorite game</label>
+      <select class="form-control" id="favgameselect" name="favgameselect" style="width:30%;margin-left:auto;margin-right:auto;">
+            <option value=0>Please select a game</option>
+        {% for game in games %} 
+            <option value={{game[0]}}>{{game[1]}}</option>
+        {% endfor %}
+      </select>
+    </div>
+    <input type="submit" value="Add User" class="btn btn-dark"\>
+  </form>
+{% if addeduserid > 0 %}
+User {{addeduser}} was added with id {{addeduserid}}
+{% endif %}
+{% endblock %}

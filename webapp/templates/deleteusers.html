@@ -1,0 +1,20 @@
+{% extends "base.html" %} 
+
+{% block title %}
+Delete User
+{% endblock %}
+{% block header %} 
+
+{% endblock %}
+{% block body %} 
+<h1>Delete User</h1>
+
+
+<form method="POST" action="/deleteusers">
+    <div class="form-group">
+      <label for="uname">Username</label>
+      <input type="text" id="stonksid" name="stonksid" class="form-control" placeholder="Please enter a stonksid" style="width:30%;margin-left:auto;margin-right:auto;">
+    </div>
+    <input type="submit" value="Delete User" class="btn btn-dark"\>
+  </form>
+{% endblock %}

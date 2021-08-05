@@ -1,0 +1,48 @@
+{% extends "base.html" %} 
+
+{% block title %}
+Change User
+{% endblock %}
+{% block header %} 
+
+{% endblock %}
+{% block body %} 
+<h1>View single User</h1>
+
+
+<form method="POST" action="/viewusers">
+    <div class="form-group">
+      <label for="stonksid">Enter Stonks ID</label>
+      <input type="text" id="stonksid" name="stonksid" class="form-control" placeholder="Please enter stonks id" style="width:30%;margin-left:auto;margin-right:auto;">
+    </div>
+    </div>
+    <input type="submit" value="View User" class="btn btn-dark"\>
+    <div style="width:30%;margin-left:auto;margin-right:auto;"></div>
+    {% if stonksid != 0 %}
+    User with stonksid {{stonksid}} has spent:<br>
+    {{moneyspent_games}} EUR on games<br>
+    {{moneyspent_dlcs}} EUR on DLCs<br>
+    {{moneyspent_dlcs+moneyspent_games}} EUR in total
+
+    </div>
+    
+  </form>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Game</th>
+          <th scope="col">Hours</th>
+        </tr>
+      </thead>
+      <tbody>
+          {% for game in playtime %}
+          <tr><td>{{game[1]}}</td><td>{{game[2]}}</td></tr>
+          {% endfor %}
+      </tbody>
+    </table>
+
+    {% endif %}
+    
+    
+
+{% endblock %}
