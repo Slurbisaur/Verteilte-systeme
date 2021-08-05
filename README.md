@@ -29,11 +29,8 @@ statistics, budget, investments and organization of the users games.
     
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Also included are the Tables developers and publishers. The developer table is dependant on the publisher table since\
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;developers need a publisher to promote and make their games available for the public. 
-
-9. Next we have a table for games_owned, which maps the games available on our platform to the users that already own 
-them. It includes the primary keys of the tables users and games (stonksid, gameid) to create an n-m link.
-
-10. The same goes for DLCs. The table dlc_owned has the fields stonksid, gameid and dlc_name (primary keys of users and dlcs).
+    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-Also included are tables for owned products games_owned, dlc_owned which map the games/dlc available on the platform to the users that already own them.
 
 11. The total play time users spent in certain games is saved in the table playtime.
 This table includes stonksid and gameid as its primary key to links to the users and games tables as well as playtime_hours as its only attribute.
