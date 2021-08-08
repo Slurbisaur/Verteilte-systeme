@@ -108,6 +108,13 @@ CREATE OR REPLACE VIEW playtime_total AS
 ```
 Since it is a view, it can be accessed like a table and complex operations can easily be implemented without resorting to subqueries, which makes it easier to develop and read.
 
+## Web Application
+*Decision how the User would interact with his/her Data and the Database --> via web interface to run sql-queries*
+
+Any user of the StonksDB is able to access their Data and statistics via the execution of sql-queries on a web-app interface. 
+This service is for demonstration purposes running locally but could easily be deployed on a publically accessible server, to provide the content to each User. 
+
+
 # Bonus
 *I learned this in the Databases course so I figured why not use my knowledge*
 
