@@ -27,7 +27,7 @@ statistics, budget, investments and organization of the users games.
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Some games offer downloadable content, also called DLC.\
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;these are maintained in a separate table called dlc which keeps track of the gameID and the name of the dlc.
     
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Also included are the tables developers and publishers. The developer table is dependant on the publisher table 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Also included are the tables developers and publishers. The developer table is dependant on the publisher table\ 
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;since developers need a publisher to promote and make their games available for the public. 
     
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Also included are tables for owned products games_owned, dlc_owned which map the games/dlc available on the platform to the users\ 
