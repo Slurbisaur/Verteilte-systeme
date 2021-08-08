@@ -114,6 +114,8 @@ Since it is a view, it can be accessed like a table and complex operations can e
 Any user of the StonksDB is able to access their Data and statistics via the execution of sql-queries on a web-app interface. 
 This service is for demonstration purposes running locally but could easily be deployed on a publically accessible server, to provide the content to each User. 
 
+This web-application is a seperate system, which acts as an intersection between the Data storage (the sql-based DB) and the user who wants to see and know stats about their profile and compare them to the stats of other users.
+
 
 # Bonus
 *I learned this in the Databases course so I figured why not use my knowledge*
