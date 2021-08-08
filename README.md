@@ -116,6 +116,9 @@ This service is for demonstration purposes running locally but could easily be d
 
 This web-application is a seperate system, which acts as an intersection between the Data storage (the sql-based DB) and the user who wants to see and know stats about their profile and compare them to the stats of other users.
 
+For the recreation of the Database to ru the queries and the web-app you just need to have postgressql installed and run pgadmin 4: 
+name a server and import the Database with the stonksDB_dump.sql file.
+
 
 # Bonus
 *I learned this in the Databases course so I figured why not use my knowledge*
