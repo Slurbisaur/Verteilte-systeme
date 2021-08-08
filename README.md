@@ -1,3 +1,6 @@
+#Video showcase
+https://youtu.be/s56XyVGtZ8Y
+
 # VerteilteSysteme-StonksDB
 *Databases Project contributor: Sebastian Hildenbeutel*
 
